@@ -1,0 +1,57 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Enable smooth scrolling */
+html, body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Fade-in sections when scrolling */
+.scroll-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Back to Top Button */
+.back-to-top-wrapper {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.back-to-top {
+    position: relative;
+    background: #ffcc00;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.back-to-top .icon {
+    font-size: 30px;
+    color: #1a23ff; 
+    animation: bounceUpDown 1.5s infinite ease-in-out;
+}
+
+@keyframes bounceUpDown {
+    0%, 100% {
+        transform: translateY(8px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
