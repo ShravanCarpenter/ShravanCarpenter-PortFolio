@@ -30,7 +30,7 @@ const Hero = () => {
                                 <span className="word">Frontend Developer</span>
                                 <span className="word">Software Developer</span>
                                 <span className="word">Creative Developer</span>
-                                <span className="word">Innovative Developer</span>
+                                <span className="word">Backend Developer</span>
                                 <span className="word">Frontend Developer</span>
                             </div>
                         </div>

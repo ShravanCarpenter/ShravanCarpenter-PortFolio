@@ -586,6 +586,8 @@
     animation: spin_4991 5s infinite;
 }
 
+
+
 @keyframes spin_4991 {
     10% {
         -webkit-transform: translateY(-102%);
@@ -654,13 +656,13 @@
 }
 
 .get-started-btn-text {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
-    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    padding: 0.4rem 0.5rem 0.2rem 0.5rem;
 }
 
 .get-started-btn-arrow-icon {
-    font-size: 30px;
+    font-size: 26px;
     padding: 2px;
     transition: transform 0.3s ease-in-out;
 }
@@ -689,13 +691,13 @@
 }
 
 .get-started-btn-text-1 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
-    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    padding: 0.4rem 0.5rem 0.2rem 0.5rem;
 }
 
 .get-started-btn-arrow-icon-1 {
-    font-size: 28px;
+    font-size: 26px;
     padding: 2px;
     animation: bounce 1.5s infinite;
 }

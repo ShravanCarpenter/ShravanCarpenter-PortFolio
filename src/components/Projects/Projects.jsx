@@ -3,7 +3,6 @@ import './Projects.css';
 import CollabRoomImage from '../../assets/CollabRoomImage.png';
 import ProfitImage from '../../assets/ProfitImage.png';
 
-// Project data structure
 const projectsData = [
     {
         id: 1,
@@ -25,7 +24,6 @@ const projectsData = [
     }
 ];
 
-// Tag component
 const Tag = ({ text }) => (
     <span className="tag">{text}</span>
 );

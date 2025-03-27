@@ -1,4 +1,3 @@
-/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,20 +5,17 @@
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* Enable smooth scrolling */
 html, body {
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
 
-/* Fade-in sections when scrolling */
 .scroll-section {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* Back to Top Button */
 .back-to-top-wrapper {
     position: fixed;
     bottom: 40px;

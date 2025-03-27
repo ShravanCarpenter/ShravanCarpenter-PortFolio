@@ -12,7 +12,7 @@ import ContactPage from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import './App.css';
 
-gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   const [showTopBtn, setShowTopBtn] = useState(false);
@@ -29,12 +29,11 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // 🚀 Apply GSAP Scroll Animations
   useEffect(() => {
     gsap.utils.toArray(".scroll-section").forEach((section) => {
       gsap.from(section, {
         opacity: 0,
-        y: 50, // Moves section upwards as you scroll
+        y: 50, 
         duration: 1,
         scrollTrigger: {
           trigger: section,
@@ -60,7 +59,6 @@ function App() {
       <ContactPage className="scroll-section" />
       <Footer />
 
-      {/* Back to Top Button */}
       {showTopBtn && (
         <div className="back-to-top-wrapper" onClick={scrollToTop}>
           <div className="back-to-top">
