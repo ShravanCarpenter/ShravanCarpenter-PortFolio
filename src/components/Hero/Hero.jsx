@@ -1,64 +1,77 @@
-import React, { useEffect } from 'react';
-import './Hero.css';
-import FrontImage from '../../assets/profilepicture.avif';
+import React, { useEffect, useState } from 'react';
 import { BsArrowUpRightCircleFill } from "react-icons/bs";
 import { GoDownload } from "react-icons/go";
+import './Hero.css';
+import Profilepicture from '../../assets/profilepicture.avif';
 
 const Hero = () => {
+    const [isVisible, setIsVisible] = useState(false);
+
     useEffect(() => {
-        // Animation for the skills banner
-        const skills = document.querySelectorAll('.skill-item');
-        skills.forEach((skill, index) => {
-            skill.style.animationDelay = `${index * 0.2}s`;
-        });
+        // Fade in animation on mount
+        setTimeout(() => setIsVisible(true), 100);
     }, []);
 
     // Ribbon text content - repeated for continuous animation
-    const ribbonText = "Hii I am Shravan Carpenter, an enthusiastic human being, who want's to do everything in his life. ";
+    const ribbonText = "Hi I am Shravan Carpenter, an enthusiastic human being, who wants to do everything in his life. ";
     const repeatedText = Array(4).fill(ribbonText).join('');
 
     return (
-        <div id="home" className="hero-container">
+        <div id="home" className={`hero-container ${isVisible ? 'fade-in' : ''}`}>
             <div className="hero-content">
                 <h2 className="hero-subtitle">Hello world!</h2>
                 <h1 className="hero-title">I'm Shravan Carpenter</h1>
+
                 <div className="hero-description">
-                    <div className="card">
-                        Passionate
-                        <div className="loader">
-                            <div className="words">
-                                <span className="word">Frontend Developer</span>
-                                <span className="word">Software Developer</span>
-                                <span className="word">Creative Developer</span>
-                                <span className="word">Backend Developer</span>
-                                <span className="word">Frontend Developer</span>
-                            </div>
-                        </div>
-                        crafting pixel-perfect, responsive
+                    <div className="description-text">
+                        <span className="description-line">
+                            Passionate{' '}
+                            <span className="loader">
+                                <span className="words">
+                                    <span className="word">MERN Developer</span>
+                                    <span className="word">Software Developer</span>
+                                    <span className="word">Creative Developer</span>
+                                    <span className="word">Backend Developer</span>
+                                    <span className="word">Frontend Developer</span>
+                                </span>
+                            </span>
+                        </span>
+                        <span className="description-line">
+                            crafting pixel-perfect, responsive interfaces. Focused on clean code, smooth UX, and modern web solutions. Always learning, innovating, and bringing ideas to life.
+                        </span>
                     </div>
-                    interfaces. Focused on clean code, smooth UX, and modern web solutions.
-                    Always learning, innovating, and bringing ideas to life.
                 </div>
 
                 <div className="hero-links">
                     <a href="#projects" className="get-started-btn">
-                        <div className='get-started-btn-text'>View My Work</div>
-                        <div className="get-started-btn-arrow-icon"><BsArrowUpRightCircleFill /></div>
+                        <span className='get-started-btn-text'>View My Work</span>
+                        <span className="get-started-btn-arrow-icon">
+                            <BsArrowUpRightCircleFill />
+                        </span>
                     </a>
 
-                    <a href="https://drive.google.com/file/d/1I2diKRH_FgnW5C3VSXc7QEWSC69VE17z/view?usp=drive_link"
+                    <a
+                        href="https://drive.google.com/file/d/1d6vQwF_ldsRRqTWZ-lq3oyGU1xF4UDH-/view?usp=drivesdk"
                         className="get-started-btn-1"
                         target="_blank"
-                        rel="noopener noreferrer">
-                        <div className='get-started-btn-text-1'>Download Resume</div>
-                        <div className="get-started-btn-arrow-icon-1"><GoDownload /></div>
+                        rel="noopener noreferrer"
+                    >
+                        <span className='get-started-btn-text-1'>Download Resume</span>
+                        <span className="get-started-btn-arrow-icon-1">
+                            <GoDownload />
+                        </span>
                     </a>
                 </div>
             </div>
 
             <div className="hero-image-container">
                 <div className="browser-content">
-                    <img src={FrontImage} alt='Profile' />
+                    <div className="image-wrapper">
+                        <img
+                            src={Profilepicture}
+                            alt='Profile'
+                        />
+                    </div>
                 </div>
             </div>
 
